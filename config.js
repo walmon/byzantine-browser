@@ -19,7 +19,7 @@ dotenv.config();
 module.exports = {
     port: process.env.PORT || 4001,
     host: process.env.HOST || "localhost",
-    loglevel: process.env.LOGLEVEL || "info",
+    loglevel: process.env.LOGLEVEL || "debug",
     wallet_path: process.env.KEYSTORE || "../hfc-key-store",
     user_id: process.env.USERID || "PeerAdmin",
     network_url: process.env.NETWORK_URL || "grpc://localhost:7051",

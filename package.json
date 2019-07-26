@@ -9,7 +9,7 @@
     "v1.0 fabric nodesdk sample"
   ],
   "scripts": {
-    "start": "npm run setupKeystore && node app",
+    "start": "npm run setupKeystore && node --inspect app",
     "setupKeystore": "rm -rf ~/.hfc-key-store && cp -r ./hfc-key-store ~/.hfc-key-store",
     "heroku-postbuild": "cd ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "start:dev": "cd ui/ && npm run build && npm start"
@@ -28,8 +28,8 @@
     "express-bearer-token": "^2.1.0",
     "express-jwt": "^5.1.0",
     "express-session": "^1.15.2",
-    "fabric-ca-client": "^1.2.1",
-    "fabric-client": "1.2.1",
+    "fabric-ca-client": "~1.4.0",
+    "fabric-client": "~1.4.0",
     "fs-extra": "^7.0.1",
     "js-sha256": "^0.9.0",
     "jsonwebtoken": "^7.3.0",
