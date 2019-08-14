@@ -75,12 +75,14 @@ Note: to change the port, edit file `./ui/package.json`.
 These three variables are used to enable TLS with the targeted peer (put them in a `.env` file in the root and replace the values for your network's):
 
 ```bash
-NETWORKPROFILE=../connection/networkprofile.json
-PEER_PEM=-----BEGIN CERTIFICATE-----\nMIICb...
+NETWORKPROFILE=../hfc-key-store/networkprofile.json
+PEER_PEM="-----BEGIN CERTIFICATE-----\nMIICb..."
 SSL_TARGET_NAME_OVERRIDE=peer1...
 ```
 
 Be sure to also replace the files in the folder `./hfc-key-store` with your keys.
+Also make sure to update the `client.credentialStore.path` and `client.credentialStore.cryptoStore.path` with `./hfc-key-store`
+The certificate should be wrapped in quotes, otherwise it won't be recognized as a single value
 
 ## Feedback
 
